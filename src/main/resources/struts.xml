@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+<!-- 几个常用的Struts2常量 -->
+<constant name="struts.i18n.encoding" value="UTF-8" /> 
+<constant name="struts.action.extension" value="do,php,action,html" /> 
+<constant name="struts.configuration.xml.reload" value="true" />
+<constant name="struts.devMode" value="true" />
+<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+<constant name="struts.serve.static.browserCache" value="false" /> 
+<constant name="struts.multipart.maxSize" value="2097152000"></constant>
+
+<constant name="struts.convention.result.path" value="/WEB-INF/content" />
+<constant name="struts.convention.package.locators" value="action,actions,struts,struts2" />
+<constant name="struts.convention.action.name.separator" value="-" />
+
+
+
+	<package name="app" extends="struts-default">
+		
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result name="404">/404.jsp</result>
+			<result name="500">/500.html</result>
+			<result name="login" type="redirect">/login.html</result>
+			<result name="register" type="redirect">/register.html</result>
+			<result name="home" type="redirect">/register.html</result>
+		</global-results>
+		<global-allowed-methods>regex:.*</global-allowed-methods>
+
+	</package>
+
+
+
+</struts>    
